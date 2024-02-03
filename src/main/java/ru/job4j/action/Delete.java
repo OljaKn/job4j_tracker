@@ -19,7 +19,9 @@ public class Delete implements UserAction {
         out.println("=== Удаление заявки ===");
         int id = input.askInt("Введите id: ");
         Item item = store.findById(id);
-        if (item != null) {
+        store.delete(id);
+        out.println(item != null ? "Заявка удалена успешно." : "Ошибка удаления заявки.");
+        /*if (item != null) {
             store.delete(id);
         } else {
             out.println("Ошибка удаления заявки.");
@@ -29,7 +31,7 @@ public class Delete implements UserAction {
             out.println("Заявка удалена успешно.");
         } else {
             out.println("Ошибка удаления заявки.");
-        }
+        }*/
         return true;
     }
 }
