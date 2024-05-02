@@ -114,7 +114,7 @@ public class HbmTracker implements Store, AutoCloseable {
         } finally {
             session.close();
         }
-        return new Item();
+        return null;
     }
 
     @Override
